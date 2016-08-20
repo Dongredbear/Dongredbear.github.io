@@ -1,9 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>读书 | Dong</title>
+    <meta name="author" content="John Doe">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="读书"/>
+    <meta property="og:site_name" content="Dong’s Blog"/>
+
+    
+    <meta property="og:image" content="undefined"/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Dong’s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
 
 
 <body>
     <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
 
-    <nav class="teal">
+    <nav class="indigo">
     <div class="nav-wrapper">
         <a href="#" data-activates="main-menu" class="button-collapse">
             <i class="fa fa-navicon"></i>
@@ -62,7 +95,7 @@
                 
             </ul>
             <div>
-    <ul class="side-nav teal" id="main-menu">
+    <ul class="side-nav indigo darken-1" id="main-menu">
         
         <li class="side-user">
             <div class="row">
@@ -130,7 +163,7 @@
         
     </ul>
 
-    <ul class="side-nav teal" id="category-menu">
+    <ul class="side-nav indigo darken-1" id="category-menu">
     
 
             
@@ -142,6 +175,20 @@
     </div>
 </nav>
 
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">Search</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
     <main>
         
 
@@ -152,15 +199,15 @@
                 <ul class="tabs ">
                     
                         <li class="tab col s4 ">
-                            <a class="blue-text " href="#readed">已读(3)</a>
+                            <a class="pink-text " href="#readed">已读(3)</a>
                         </li>
                     
                         <li class="tab col s4 ">
-                            <a class="blue-text " href="#reading">在读(1)</a>
+                            <a class="pink-text " href="#reading">在读(1)</a>
                         </li>
                     
                         <li class="tab col s4 ">
-                            <a class="blue-text " href="#wanted">想读(1)</a>
+                            <a class="pink-text " href="#wanted">想读(1)</a>
                         </li>
                     
                 </ul>
@@ -175,7 +222,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="http://img3.douban.com/lpic/s23139051.jpg">
                                 </div>
-                                <div class="card-content blue-link-context">
+                                <div class="card-content pink-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">众妙之门：网站UI设计之道
                                     </span>
                                     <p>Score: 7
@@ -201,7 +248,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="http://img5.douban.com/lpic/s11337059.jpg">
                                 </div>
-                                <div class="card-content blue-link-context">
+                                <div class="card-content pink-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">JavaScript模式
                                     </span>
                                     <p>Score: 8.5
@@ -227,7 +274,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="http://img3.douban.com/lpic/s11373174.jpg">
                                 </div>
-                                <div class="card-content blue-link-context">
+                                <div class="card-content pink-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">JavaScript语言精粹
                                     </span>
                                     <p>Score: 9.5
@@ -258,7 +305,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="http://img4.douban.com/lpic/s27881888.jpg">
                                 </div>
-                                <div class="card-content blue-link-context">
+                                <div class="card-content pink-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">网络游戏核心技术与实战
                                     </span>
                                     <p>Score: ???
@@ -289,7 +336,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="http://img4.douban.com/lpic/s1113106.jpg">
                                 </div>
-                                <div class="card-content blue-link-context">
+                                <div class="card-content pink-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">计算机程序的构造和解释
                                     </span>
                                     <p>Score: ???
@@ -317,49 +364,22 @@
         
 
 
-    <section id="comment">
-        <div class="card">
-            <div class="card-content">
-                <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="reading/index.html" data-title="读书" data-url="http://yoursite.com/reading/index.html"></div>
-
-                <script type="text/javascript">
-                    console.log(document.querySelector('.ds-thread'));
-                    var duoshuoQuery = {
-                        short_name: 'donghexo'
-                    };
-                    (function() {
-                        var ds = document.createElement('script');
-                        ds.type = 'text/javascript';
-                        ds.async = true;
-                        ds.src = (document.location.protocol == 'https:'
-                            ? 'https:'
-                            : 'http:') + '//static.duoshuo.com/embed.js';
-                        ds.charset = 'UTF-8';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-                    })();
-                </script>
-                <!-- Duoshuo Comment END -->
-            </div>
-        </div>
-    </section>
-
 
     
 </div>
 
         <div class="fixed-action-btn float-sitemap">
-    <a class="btn-floating btn-large blue">
+    <a class="btn-floating btn-large pink">
       <i class="fa fa-caret-square-o-up"></i>
     </a>
     <ul>
-      <li><a class="btn-return-top btn-floating waves-effect blue-grey lighten-3" title="Return to top"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse blue accent-1"  data-activates="main-menu" title="menu"><i class="fa fa-navicon"></i></a></li>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="Return to top"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="menu"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
 
     </main>
-    <footer class="page-footer teal darken-1">
+    <footer class="page-footer indigo darken-1">
     
     <div class="container">
         <div class="row">
@@ -396,9 +416,9 @@
     </div>
     
 
-    <div class="footer-copyright blue-link-context">
+    <div class="footer-copyright pink-link-context">
         <div class="container">
-            © 2016 Dong, All rights reserved.
+            © 2016 example.com, All rights reserved.
             <p class="right" style="margin-top: 0;">Blog powered by <a href="https://hexo.io">Hexo</a> | Theme <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
         </div>
     </div>
@@ -477,11 +497,11 @@
             $('li.tab a').hover(function() {
                 $(this).toggleClass('text-lighten-4');
             });
-            $('.indicator').addClass('blue lighten-2');
+            $('.indicator').addClass('pink lighten-2');
 
             
             // 添加new标签
-            $('.menu-reading, .menu-about').append('<span class="new badge blue"></span>');
+            $('.menu-reading, .menu-about').append('<span class="new badge pink"></span>');
             
 
             // 搜索功能
@@ -556,7 +576,7 @@
                             if (isMatch) {
                                 keywords.forEach(function(keyword) {
                                     var regS = new RegExp(keyword, "gi");
-                                    data_title = data_title.replace(regS, "<span class=\"search-keyword blue lighten-2\">" + keyword + "</span>");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
                                 });
 
                                 str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
@@ -578,7 +598,7 @@
                                     // highlight all keywords
                                     keywords.forEach(function(keyword) {
                                         var regS = new RegExp(keyword, "gi");
-                                        match_content = match_content.replace(regS, "<span class=\"search-keyword blue lighten-2\">" + keyword + "</span>");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
                                     });
 
                                     str += "<p class=\"search-result\">..." + match_content + "...</p>"
@@ -603,8 +623,6 @@
         prettyPrint();
     });
 </script>
-
-
 
 
 
